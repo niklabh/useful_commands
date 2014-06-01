@@ -19,3 +19,9 @@ git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgre
 ```
 git show `git log | grep "Ranjan" -C 3| grep commit | awk '{print $2}'`
 ```
+
+###Jshint all important files in projects
+
+```
+find . -type f -name '*.js' -and -not -path './node_modules/*' -and -not -path './public/*' -and -not -path './doc/*' | xargs jshint | less
+```
