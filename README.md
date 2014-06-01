@@ -25,3 +25,9 @@ git show `git log | grep "Ranjan" -C 3| grep commit | awk '{print $2}'`
 ```
 find . -type f -name '*.js' -and -not -path './node_modules/*' -and -not -path './public/*' -and -not -path './doc/*' | xargs jshint | less
 ```
+
+###Update a linux box
+
+```
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get clean
+```
