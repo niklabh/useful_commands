@@ -31,3 +31,9 @@ find . -type f -name '*.js' -and -not -path './node_modules/*' -and -not -path '
 ```
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get clean
 ```
+
+###Split a File on a particular line pattern
+
+```
+awk '/IAMAPATTERN/{x="itc_codes"++i;next}{print > x;}' filename
+```
